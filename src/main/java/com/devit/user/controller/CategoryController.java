@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(origins = "http://localhost:8080, http://54.180.123.156:8080")
 public class CategoryController {
     private final CategoryService categoryService;
 
