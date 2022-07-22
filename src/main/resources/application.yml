@@ -1,0 +1,47 @@
+# jwt secret key
+jwt:
+  secret: "50g/NGsxw15SwkKw8f+fxuXw6hBrEVYXCgJwyzItp8I="
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-devit-user.copkmnpqtze8.ap-northeast-2.rds.amazonaws.com:3306/devit_user?characterEncoding=utf8
+    username: daehee
+    password: tjseo1024
+
+  rabbitmq:
+    host: 52.79.236.81
+    password: 1234
+    port: 5672
+    username: devit
+    routingkey: devit.routingkey
+    user :
+      exchange: x.devit.user
+      queue: q.devit.user
+    board :
+      exchange: x.devit.board
+      queue: q.devit.board
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        one-indexed-parameters: true
+  profiles:
+    include: API-KEY
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
+
