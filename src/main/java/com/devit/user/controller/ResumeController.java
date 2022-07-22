@@ -34,6 +34,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8080")
 public class ResumeController {
 
     private final ResumeService resumeService;
