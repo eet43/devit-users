@@ -1,5 +1,16 @@
 
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://54.180.93.206:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 spring:
+  application:
+    name: user-service
   main:
     allow-bean-definition-overriding: true
   datasource:
