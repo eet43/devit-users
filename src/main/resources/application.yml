@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://database-devit-user.copkmnpqtze8.ap-northeast-2.rds.amazonaws.com:3306/devit_user?characterEncoding=utf8
     username: daehee
-    password: tjseo1024
+    password: 12345678
 
   rabbitmq:
     host: 52.79.236.81
