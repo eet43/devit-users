@@ -27,7 +27,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8080, http://54.180.123.156:8080")
 public class UserController {
     private final UserService userService;
     private final ResumeService resumeService;
