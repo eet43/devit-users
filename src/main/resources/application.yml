@@ -7,6 +7,7 @@ eureka:
       defaultZone: http://54.180.93.206:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
 
 spring:
   application:
@@ -33,23 +34,10 @@ spring:
       queue: q.devit.board
 
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  data:
-    web:
-      pageable:
-        default-page-size: 10
-        one-indexed-parameters: true
-  profiles:
-    include: API-KEY
-
-logging.level:
-  org.hibernate.SQL: debug
-  org.hibernate.type: trace
 
